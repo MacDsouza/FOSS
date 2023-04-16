@@ -1,0 +1,53 @@
+---
+import logo from'.../images/FOSS.jpg';
+---
+
+<header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src={logo} alt="" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/history">HISTORY</a></li>
+          <li><a href="/benefits">BENEFITS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<style>
+    .header {
+  height: 150px;
+
+  background: var(--color-primary);
+  background-image: url(src/images/FOSS.jpg);
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+
+
+.header nav ul {
+  display: flex;
+  text-align: right;
+}
+
+.header nav ul li {
+  padding: 0 20px;
+}
+
+.header nav ul li a {
+  color: #fff;
+}
+</style>

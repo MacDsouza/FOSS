@@ -1,0 +1,84 @@
+---
+const name="HISTORY";
+---
+
+<footer class="footer">
+    <div class="container">
+      <div class="wrapper">
+        <p>WANT TO KNOW MORE ABOUT <b><i>FOSS</i></b>,&nbsp&nbspCHECK OUT ITS</p>
+        <div class="words">
+            <span> <b><i></i></b></span>
+            <span> <b><i>HISTORY</i></b></span>
+            <span> <b><i>APPLICATIONS</i></b></span>
+            <span> <b><i>BENEFITS</i></b></span>
+            <span> <b><i>#!**@&</i></b></span>
+
+        </div>
+    </div>
+    </div>
+  </footer>
+
+  <style>
+
+.footer {
+  background: #033147;
+  color: #a8d4eb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper{
+    box-sizing: content-box;
+    background-color: #033147;
+    height: 30px;
+    padding: 50px 30px;
+    display: flex;
+    border-radius: 8px;
+    
+}
+.words{
+    overflow: hidden;
+}
+span{
+    display: block;
+    height: 120%;
+    padding-left: 10px;
+    color: #f2bb1a;
+    animation: spin_words 6s infinite;
+}
+@keyframes spin_words{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}
+
+
+  </style>

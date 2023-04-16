@@ -1,0 +1,89 @@
+---
+import Layouts from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layouts title="HISTORY">
+    <main>
+
+        <div class="history">
+            <div class="outer">
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">1950s</h3>
+                  <p>The development of FOSS has its roots in the early days of computing. In the 1950s and 1960s, most software was written by individual programmers and shared freely among the academic and research communities. This early culture of sharing laid the groundwork for the development of FOSS.
+                </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">1970s</h3>
+                  <p>In the 1970s and 1980s, as commercial software became more prevalent, some programmers began to question the proprietary model and advocate for a more open and collaborative approach. The Free Software Foundation, founded by Richard Stallman in 1985, was one of the earliest organizations to promote the principles of FOSS. Stallman's "GNU Manifesto" called for the creation of a completely free and open source operating system, which led to the development of the GNU project. </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">1990s</h3>
+                  <p>In the 1990s, Linus Torvalds developed the Linux operating system, which was released under the GNU General Public License (GPL) and became one of the most widely used examples of FOSS. Other popular FOSS projects, such as the Apache web server, MySQL database,and the Python programming language, also emerged during this period.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Today</h3>
+                  <p>Today, FOSS has become an increasingly important part of the technology landscape. Many large companies, including IBM, Google, and Red Hat, have invested in FOSS development and support, and FOSS is used in a wide range of applications, from web servers to mobile devices to cloud computing.
+                  The development of FOSS has been driven by a community of dedicated programmers, users, and supporters who believe in the benefits of open and collaborative software development. While the landscape of technology continues to evolve, it is clear that FOSS will continue to play an important role in shaping the future of computing. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+    </main>
+
+</Layouts>
+
+<style> 
+
+
+.history {
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.outer {
+  border-left: 3px solid #f2bb1a;
+}
+
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #033147;
+  color: #a8d4eb;
+  border-radius: 8px;
+  max-width: 1500px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  color: #f2bb1a;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f2bb1a;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid #f2bb1a;
+}
+</style>

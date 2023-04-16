@@ -1,81 +1,99 @@
 ---
+import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import card from'../images/fosscard.jpg';
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="FOSS">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<div class="txt">
+			<h1>SO,<br>WHAT <br>IS</h1>
+			
+		</div>
+		<div class="main-div">
+            <div class="card">
+                <div class="imgbox">
+                    <img src={card} alt="">
+                </div>
+                <div class="content">
+                   
+                    <p>FOSS stands for "Free and Open Source Software." It refers to software that is distributed under a license that allows users to run, modify, and distribute the software without having to pay licensing fees or obtain permission from the original creator.Free and Open Source Software is typically developed by a community of programmers who collaborate on the code, often contributing their own improvements and fixes.This approach allows for a more transparent and decentralized development process, which can lead to more secure, stable, and innovative software.Some of the most popular examples of FOSS include the Linux operating system, the Apache web server, and the LibreOffice productivity suite.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+
+       
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+
+	.txt{
+		font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    	font-size: 55px;
+        text-align: center;
+		
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+
+	.card {
+    margin: 0 2rem 0 2rem;
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+    
+    padding: 30px;
+    transition: .3s;
+    background-color: #0f1a2b;
+    cursor: pointer;
+}
+
+.card:hover {
+    height: 350px;
+    transition: .3s;
+}
+
+.card:hover .content {
+    transform: translateY(-170px);
+    opacity: 1;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    
+    transform: translateY(-80px);
+}
+
+.content {
+    transition: .3s;
+    transform: translateY(-350px);
+    text-align: center;
+    opacity: 0;
+}
+
+.content h2 {
+    margin-bottom: 0.3rem;
+}
+
+.main-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
 </style>
