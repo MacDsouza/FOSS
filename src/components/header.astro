@@ -6,7 +6,7 @@ import logo from'.../images/FOSS.jpg';
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src={logo} alt="" />
+          <img src="src/images/logo.png" alt="" />
         </a>
       </div>
       <nav>
@@ -22,15 +22,13 @@ import logo from'.../images/FOSS.jpg';
 <style>
     .header {
   height: 150px;
-
-  background: var(--color-primary);
   background-image: url(src/images/FOSS.jpg);
 }
 
 .header .container {
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: space-between;
   padding: 0 20px;
 }
@@ -38,16 +36,18 @@ import logo from'.../images/FOSS.jpg';
 
 
 
-.header nav ul {
+.header ul {
   display: flex;
   text-align: right;
+  
 }
 
-.header nav ul li {
+.header  ul li {
   padding: 0 20px;
+  align-items: right;
 }
 
-.header nav ul li a {
+.header  ul li a {
   color: #fff;
 }
 </style>
